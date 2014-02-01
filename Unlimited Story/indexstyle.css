@@ -1,0 +1,27 @@
+BODY
+{font-family:  verdana;}
+.aventure1{
+border-style:solid; 
+border-width:1px; 
+border-color:black; 
+padding:10px; 
+
+width:45%;
+float:left;
+margin: 2px;
+}
+.createurs{
+border-style:solid; 
+border-width:1px; 
+border-color:black; 
+padding:10px; 
+
+float:right;
+margin: 2px;
+width:45%;
+}
+.merci{
+padding:10px; 
+float:left;
+margin: 2px;
+}

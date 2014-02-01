@@ -1,0 +1,45 @@
+*******Merci d'avoir téléchargé ce script :)*********
+
+-INSTALLATION :
+
+Transferez l'integralité de l'archive sur votre site.
+Créez le premier épisode en tapant le lien ci contre :
+http://votre.site/episode.php?episode=1
+(en remplacant bien évidemment "votre.site").
+Ou, à partir de l'index, en cliquant sur "commencer cette aventure depuis le début".
+
+Aucune base de donnée n'est necessaire.
+Votre hebergeur doit supporter le php 4 (free ou lycos, par exemple).
+
+Pour ceux qui souhaiteraient modifier les CSS par défaut, éditez ajout final dans les lignes 88 et 89, et remplacez "Pas de style", "Fantasy" etc...par des noms de votre choix, puis éditez ajouttermine et remplacez "nostyle.css", "fantasy.css" etc par les votre.
+
+Fonctionne avec easy php 1.8.0.1 (Apache/1.3.33 (Win32) PHP/4.3.10).
+/!\ Je ne suis pas expert en php, loin de là, il peut y avoir des failles. N'utilisez pas le script sur un site contenant des choses sensibles. /!\
+
+-CONTACT :
+trotter_me@hotmail.com
+trotter.poulpe@gmail.com
+
+Contenu de l'archive :
+ajout.php;ajoutfinal.php;all.php;arbre.txt;dernier.txt;episode.php;fantasy.css;
+FAQ.htm;genererhtml.php;Genererplan.txt;IfAvToGraphviz.exe;
+index.php;indexstyle.css;last100.php;Lisez-moi.txt;nostyle.css;sf.css;rechercheparauteur.php
+
+-CHANGELOG :
+18 septembre 2010.
+-Passage à l'UTF8, on peut désormais utiliser du chinois, du russe...
+-Quelques corrections de bugs et de fautes.
+-Ajout du fichier index.php, last100.php, all.php, rechercheparauteur.php, FAQ.htm.
+30 janvier 2010.
+-Correction de bugs, vulnérabilités et fautes d'orthographe.
+-Ajout d'une explication pour la génération d'arbre.
+15 janvier 2006.
+-Ajout de quelques CSS d'exemples.
+13 janvier 2006.
+-Support des CSS;
+-Arbre corrigé (et ajout des noms d'auteurs);
+-Les balises HTML ont été remplacés par des BBcodes;
+-Support des images;
+-Elimination d'une erreur qui disait que l'épisode était déjà en cours de création lorsqu'on tentait un retour en arriere à la page de l'ajout des liens;
+-Probleme de la coupe des épisodes apres un guillemet résolu;
+-Résolution de quelques problemes de compatibilités avec le renard de feu.
