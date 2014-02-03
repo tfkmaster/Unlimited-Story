@@ -74,7 +74,7 @@ $epmere=split(">",$epmere[0]);
 $epmere=split("=",$epmere[sizeof($epmere)-1]);
 //echo "<bR>episode mere :".$epmere[0];
 //fin du cherchage
-fputs ($fp,"<head><meta http-equiv=\"Content-type\" content=\"text/html; charset=UTF-8\"/><title>Post ".htmlentities($episode)." - ".$titre."</title><link href=\"nostyle.css\" rel=\"stylesheet\" type=\"text/css\"></head><p align=right>Post parent : <a href=\"".$epmere[0].".htm\">".$epmere[0]."</a></p><div class=\"general\"><div class=\"titre\"><H1>".$titre."</H1></div><div class=\"episode\"><H2>Post ".htmlentities($episode)." :</H2></div><div class=\"description\">".$description."<br><br></div><div class=\"liens\">");
+fputs ($fp,"<head><meta http-equiv=\"Content-type\" content=\"text/html; charset=UTF-8\"/><title>Post ".htmlentities($episode)." - ".$titre."</title><link href=\"post.css\" rel=\"stylesheet\" type=\"text/css\"></head><p align=right>Post parent : <a href=\"".$epmere[0].".htm\">".$epmere[0]."</a></p><div class=\"general\"><div class=\"titre\"><H1>".$titre."</H1></div><div class=\"episode\">Post ".htmlentities($episode)."</div><hr><br><div class=\"description\">".$description."<br></div><hr><div class=\"liens\">");
 $nbrchoix=$_POST["nbrchoix"];
 for ($i=0; $i!=$nbrchoix; $i++)
 {
@@ -119,7 +119,7 @@ else{
 $auteur=$_POST["auteur"];
 $auteur=stripslashes($auteur);
 $auteur = htmlspecialchars($auteur, ENT_QUOTES);
-fputs ($fp,"</div></div><br><br><hr><b><i>".$auteur);
+fputs ($fp,"</div></div><hr><div class=\"auteur\">".$auteur."</div>");
 $auteur=str_replace ("[", "", $auteur);
 $auteur=str_replace ("]", "", $auteur);
 $auteur=str_replace ("{", "", $auteur);

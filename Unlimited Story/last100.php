@@ -26,7 +26,7 @@ for ($i=100; $i!=0; $i--)
 {
 //isole le n° de l'épisode
 $nepisode=explode("=",$tabcoup[$taille-$i]);
-echo "<br><a href=".$nepisode[0].".htm>Post ". $nepisode[0];
+echo "<br><a href=p1/".$nepisode[0].".html>Post ". $nepisode[0];
 //isole le titre de l'épisode
 $nepisode=explode("{",$tabcoup[$taille-$i]);
 //vérifie s'il y a titre

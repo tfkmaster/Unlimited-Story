@@ -1,27 +1,65 @@
-BODY
-{font-family:  verdana;}
-.aventure1{
-border-style:solid; 
+/* reset */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,label,input,textarea,p,blockquote,table,th,td{margin:0;padding:0;}
+/* end reset */
+
+/* standard tags */
+body{
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+  	font-size: 14px;
+  	color:#000;
+  	background-color: #EEE;
+}
+
+fieldset{
+	border:1px solid #CCC;
+	display: inline-block;
+}
+
+legend{
+	color:#BBB;
+}
+
+h1{
+	margin: 5px;
+	letter-spacing: 3px;
+}
+
+h3{
+	margin-bottom: 15px;
+}
+
+a{
+	color: #17E;
+} 
+
+a:hover{
+	text-decoration: none;
+}
+
+/* end standard tags */
+
+/* custom tags */
+.players{
+border-style:solid;
 border-width:1px; 
 border-color:black; 
+background-color: #FFF;
 padding:10px; 
 
-width:45%;
+width:40%;
 float:left;
-margin: 2px;
+margin-left: 5%;
 }
-.createurs{
+
+.authors{
 border-style:solid; 
 border-width:1px; 
 border-color:black; 
+background-color: #FFF;
 padding:10px; 
 
 float:right;
-margin: 2px;
-width:45%;
+margin-right: 5%;
+width:40%;
 }
-.merci{
-padding:10px; 
-float:left;
-margin: 2px;
-}
+/* end custom tags */

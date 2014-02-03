@@ -1,12 +1,9 @@
 <?php header('Content-type: text/html; charset=UTF-8'); ?>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Infinie Aventure</title>
+<title>Recherche Auteur</title>
 <link href="indexstyle.css" rel="stylesheet" type="text/css">
-</head><p align=right>Episode parent : <a href="index.php">index</a>
-<center><H6>L'histoire du retour des loutres-loups-garoutes-g&eacute;antes du futur du 6e orbe de Johnson dans les bars chinois, les tunnels souterrains et tout Tamriel, autrement dit l'...</H6>
-<H1>INFINIE AVENTURE</H1></center>
-
+</head><p align=right>Post parent : <a href="index.php">index</a><center>
 <?php
 //on ouvre tout le fichier
 $filetotal="";
@@ -25,11 +22,11 @@ if(strpos($auteur,"echo")!==false){$tentativepirate=true;}
 
 if($tentativepirate==true)
 {
-echo "Votre tentative de piratage a &eacute;t&eacute; signal&eacute;e. Non je d&eacute;conne.<br><br>Alors on disait...";
+echo "Votre tentative de piratage √† √©t√© d√©tect√© !... Non je d√©conne :P";
 }
 
 echo "Recherche de l'auteur : ".$auteur."<br>";
-//lit ligne par ligne tant qu'on est pas ‡ la fin
+//lit ligne par ligne tant qu'on est pas ?la fin
 while (!feof ($lecture)) {
 $ligne= fgets($lecture, 1024);
 //on trouve la ligne par l'auteur
@@ -37,18 +34,18 @@ if (preg_match("[".$auteur."]", $ligne)){
 $auteurtrouve=true; 
 //echo "<br>".$ligne;
 
-//on trouve le n∞
+//on trouve le n?
 $coup=split("=", $ligne);
 $coup=split(">", $coup[0]);
-echo "<br><a href=\"".$coup[1].".htm\">Episode ".$coup[1]."</a>";
+echo "<br><a href=p1/".$coup[1].".html>Post n¬∞".$coup[1]."</a>";
 
-//isole le titre de l'Èpisode
+//isole le titre de l'?isode
 $nepisode=explode("{",$ligne);
-//vÈrifie s'il y a titre
+//v?ifie s'il y a titre
 if(empty($nepisode[1])) 
 {}
 else{
-// Test si la longueur du texte dÈpasse la limite
+// Test si la longueur du texte d?asse la limite
 	if (strlen($nepisode[1])>200){
 	$nepisode[1] = substr($nepisode[1], 0, 40);
 	$nepisode[1]=$nepisode[1]."...";
@@ -62,5 +59,5 @@ echo " : ". $nepisode[0];
 
 if($auteurtrouve==false)
 {
-echo "Cet auteur est introuvable sur l'Infinie Aventure.";
+echo "Cet auteur est introuvable.";
 }
