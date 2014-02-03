@@ -4,8 +4,8 @@ $episode = $_GET['episode'];
 if ((!is_numeric($episode)) || ($episode<1)) {
 	exit("Format [episode] non valide");
 }
-$fb = fopen ("dernier.txt", "r");
-$lastnbr=fread ($fb, filesize("dernier.txt"));
+$fb = fopen ("last.txt", "r");
+$lastnbr=fread ($fb, filesize("last.txt"));
 fclose ($fb);
 
 //test des variables
@@ -70,7 +70,7 @@ $apercudescription=str_replace ("\r", "<br>",$apercudescription);
 echo "Votre post sera comme ceci :<hr><H1>".$titre."</H1>";
 echo "<H2>Post ".htmlentities($episode)." :</h2>"; 
 echo $apercudescription;
-echo "<form method=\"POST\" action=\"ajout.php?episode=".htmlentities($episode)."\">";
+echo "<form method=\"POST\" action=\"add.php?episode=".htmlentities($episode)."\">";
 //echo "<br><br><A HREF=\"javascript:history.go(-1)\">Retour en arriere.</A>";
 echo "<input name=\"description\" type=\"hidden\" readonly value=\"".$description."\">";
 echo "<input name=\"titre\" readonly type=\"hidden\" value=\"".$titre."\">";
@@ -88,7 +88,7 @@ echo "</form>";
 echo "<input name=\"choix\" readonly type=\"hidden\" value=\"".$nbrchoix."\">";
 echo "<br><br><input type=submit value=\"Editer le post\"><br>(Attention, c'est votre dernière chance de modifier votre post. Relisez-le bien.)<hr><br><b>Choix :<br></b>";
 echo "</form>";
-echo "<form method=\"POST\" action=\"genererhtml.php?episode=".htmlentities($episode)."\">";
+echo "<form method=\"POST\" action=\"htmlgen.php?episode=".htmlentities($episode)."\">";
 echo "<input name=\"description\" type=\"hidden\" readonly value=\"".$description."\">";
 echo "<input name=\"titre\" readonly type=\"hidden\" value=\"".$titre."\">";
 if ( is_numeric($nbrchoix) )

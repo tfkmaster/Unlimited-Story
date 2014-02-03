@@ -4,8 +4,8 @@ $episode = $_GET['episode'];
 if ((!is_numeric($episode)) || ($episode<1)) {
 	exit("Format [episode] non valide");
 }
-$fb=fopen ("dernier.txt", "r");
-$editableposts=fread ($fb, filesize("dernier.txt"));
+$fb=fopen ("last.txt", "r");
+$editableposts=fread ($fb, filesize("last.txt"));
 fclose($fb);
 
 $fepisode="p1/".htmlentities($episode).".html";
@@ -54,12 +54,12 @@ $description=str_replace ("[/img]", "\">", $description);
 $description=str_replace ("\r", "<br>",$description);
 $file="p1/".htmlentities($episode).".html";
 $fp = fopen ($file, "w");
-$fb = fopen ("dernier.txt", "r+");
-$arbre = fopen ("arbre.txt", "a+");
+$fb = fopen ("last.txt", "r+");
+$arbre = fopen ("storyline.txt", "a+");
 fputs ($arbre,"\r\n>".htmlentities($episode)."=");
 $lastnbr=fread ($fb, filesize("dernier.txt"));
 //on cherche l'épisode parent
-$chparentarbre = fopen ("arbre.txt", "r");
+$chparentarbre = fopen ("storyline.txt", "r");
 
 while (!feof ($chparentarbre )) {
 $buffer = fgets($chparentarbre , 4096);

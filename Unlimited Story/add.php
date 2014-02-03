@@ -36,8 +36,8 @@ $choix="";
 else{
 $choix = $_POST['choix'];
 }
-$fp = fopen ("dernier.txt", "r");
-$n_dernier = fread ($fp, filesize("dernier.txt"));
+$fp = fopen ("last.txt", "r");
+$n_dernier = fread ($fp, filesize("last.txt"));
 fclose ($fp);
 
 $fepisode="p1/".htmlentities($episode).".html";
@@ -94,7 +94,7 @@ else if($etatepisode!="encours")
 {
 echo "<br></b><b>Post n°";
 echo htmlentities($episode)." :"; 
-echo "<form method=\"POST\" action=\"ajoutfinal.php?episode=".htmlentities($episode)."\">";
+echo "<form method=\"POST\" action=\"addfinal.php?episode=".htmlentities($episode)."\">";
 echo "</b> Vous pouvez donner un titre à votre Post (conseillé)<br> <INPUT NAME=\"titre\" size=70% value=\"".$titre."\">
 <br>
 <br>
@@ -103,7 +103,7 @@ Contenu du Post :
 <textarea name=\"description\" rows=10 cols=80 >".$etatepisode.$description."</textarea>
 <br>
 Tags de mise en forme :
-[b]<b>gras</b>[/b] | [i]<i>italique</i>[/i] | [u]<u>souligné</u>[/u] | [s]<s>barré</s>[s] | [img]URL de l'image[/img]
+[b]<b>gras</b>[/b] | [i]<i>italique</i>[/i] | [u]<u>souligné</u>[/u] | [s]<s>barré</s>[/s] | [img]URL de l'image[/img]
 <br>
 <br>
 Nombre de choix du joueur ";

@@ -6,8 +6,8 @@ if ((!is_numeric($episode)) || ($episode<1)) {
 }
 
 $fepisode="p1/".htmlentities($episode).".html";
-$fb=fopen ("dernier.txt", "r");
-$editableposts=fread ($fb, filesize("dernier.txt"));
+$fb=fopen ("last.txt", "r");
+$editableposts=fread ($fb, filesize("last.txt"));
 fclose($fb);
 
 if ($episode>$editableposts) {
@@ -20,7 +20,7 @@ header("Location: p1/".htmlentities($episode).".html")    ;
 echo "Post n°".htmlentities($episode)." :"; 
 //Le fichier n'existe pas
 echo " :<br><br>Il n'y a aucun post à cet endroit. N'hésitez pas à en créer un !<br><br>";
-echo "<a href=\"ajout.php?episode=".htmlentities($episode)."\">* Créer le post.</A>";
+echo "<a href=\"add.php?episode=".htmlentities($episode)."\">* Créer le post.</A>";
 echo "<br><br><a href=\"javascript:history.go(-1)\">* Ne pas faire de post et retourner en arrière.</p></a>";
 }
 ?>

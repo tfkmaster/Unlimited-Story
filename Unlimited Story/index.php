@@ -136,7 +136,7 @@ for ($j=0; $j!=5;  $j++)
 //Then, the author who have the most occurrence is placed in the top of leaderboard
 $podium=$podium.$tabauteurclassement[$j].$tabnumclassement[$j];
 //echo "Leaderboard ".$podium;
-echo "<br><br><b>".($j+1).".</b> <a href=\"rechercheparauteur.php?auteur=".$tabauteurclassement[$j]."\">".$tabauteurclassement[$j]."</a><br>"."(".$tabnumclassement[$j]." Posts)";
+echo "<br><br><b>".($j+1).".</b> <a href=\"authorsearch.php?auteur=".$tabauteurclassement[$j]."\">".$tabauteurclassement[$j]."</a><br>"."(".$tabnumclassement[$j]." Posts)";
 
 }
 ?>
