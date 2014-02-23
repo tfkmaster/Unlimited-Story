@@ -13,7 +13,7 @@
 <a href="post.php?episode=1">Start the story from the beginning</a><br><br>
 <p>10 last posts</p><br>
 
-<?
+<?php
 $filetotal="";
 $fd=fopen("storyline.txt","r");
 
@@ -29,7 +29,7 @@ $tabcoup=explode(">",$filetotal);
 $taille=count($tabcoup);
 ?>
 
-<?
+<?php
 for ($i=10; $i!=0; $i--)
 {
 
@@ -59,8 +59,10 @@ for ($i=10; $i!=0; $i--)
 	$nepisode=explode("[",$tabcoup[$taille-$i]);
 
 	//Check if the post have author
-	if(empty($nepisode[1])) {}
-	else{
+	if(empty($nepisode[1])) 
+	{}
+	else
+	{
 		$nepisode=explode("]",$nepisode[1]);
 		echo  "<i> par ".$nepisode[0]."</i>";
 	}
@@ -77,7 +79,7 @@ for ($i=10; $i!=0; $i--)
 <br><a href="FAQ.php">FAQ</a><br><br>
 <b><u>Authors leaderboard :</b></u>
 
-<?
+<?php
 $tabauteurclassement[0]="";
 $tabnumclassement[0]=0;
 $tabauteurclassement[1]="";

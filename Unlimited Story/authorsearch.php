@@ -8,7 +8,6 @@
 <body><p align=right>Parent post : <a href="index.php">index</a></p><center>
 
 <?php
-//on ouvre tout le fichier
 $filetotal="";
 $auteur = $_GET['auteur'];
 $lecture=fopen("storyline.txt","r");
