@@ -1,7 +1,7 @@
 Unlimited-Story
 ===============
 
-SImple PHP system for no-limit text-based collaborative story.
+Simple PHP system for no-limit text-based collaborative story.
 
 ###Credits
 Je remercie **Trotter Poulpe** pour avoir mis en ligne le script d'*Infinie Adventure*
