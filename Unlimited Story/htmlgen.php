@@ -9,7 +9,7 @@ $fb=fopen ("last.txt", "r");
 $editableposts=fread ($fb, filesize("last.txt"));
 fclose($fb);
 
-$fepisode="p1/".htmlentities($episode).".html";
+$fepisode="posts/".htmlentities($episode).".html";
 if (file_exists($fepisode)) 
 {
 	echo "This post already exist !";
@@ -57,7 +57,7 @@ else
 			$description=str_replace ("[img]", "<img src=\"", $description);
 			$description=str_replace ("[/img]", "\">", $description);
 			$description=str_replace ("\r", "<br>",$description);
-			$file="p1/".htmlentities($episode).".html";
+			$file="posts/".htmlentities($episode).".html";
 			$fp = fopen ($file, "w");
 			$fb = fopen ("last.txt", "r+");
 			$arbre = fopen ("storyline.txt", "a+");

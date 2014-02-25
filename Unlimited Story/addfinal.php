@@ -40,7 +40,7 @@ else
 			//$titre=str_replace ("\"", "&quot;", $titre);
 		}
 
-		$fepisode="p1/".htmlentities($episode).".html";
+		$fepisode="posts/".htmlentities($episode).".html";
 		if (file_exists($fepisode)) 
 		{
 		    //L'?isode existe d??!

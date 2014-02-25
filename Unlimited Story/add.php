@@ -45,7 +45,7 @@ $fp = fopen ("last.txt", "r");
 $n_dernier = fread ($fp, filesize("last.txt"));
 fclose ($fp);
 
-$fepisode="p1/".htmlentities($episode).".html";
+$fepisode="posts/".htmlentities($episode).".html";
 if ($episode>$n_dernier)
 {
 	$etatepisode="outofrange";

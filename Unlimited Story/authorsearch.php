@@ -38,7 +38,7 @@ while (!feof ($lecture))
 		//Get post number
 		$coup=split("=", $ligne);
 		$coup=split(">", $coup[0]);
-		echo "<br><a href=p1/".$coup[1].".html>Post n°".$coup[1]."</a>";
+		echo "<br><a href=posts/".$coup[1].".html>Post n°".$coup[1]."</a>";
 
 		//Get the post title
 		$nepisode=explode("{",$ligne);

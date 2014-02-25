@@ -6,7 +6,7 @@ if ((!is_numeric($episode)) || ($episode<1))
 	exit("[episode] type not valid");
 }
 
-$fepisode="p1/".htmlentities($episode).".html";
+$fepisode="posts/".htmlentities($episode).".html";
 $fb=fopen ("last.txt", "r");
 $editableposts=fread ($fb, filesize("last.txt"));
 fclose($fb);
@@ -19,7 +19,7 @@ if ($episode>$editableposts)
 } 
 elseif (file_exists($fepisode)) 
 {
-	header("Location: p1/".htmlentities($episode).".html")    ;
+	header("Location: posts/".htmlentities($episode).".html")    ;
 } 
 else 
 {

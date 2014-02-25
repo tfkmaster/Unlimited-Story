@@ -35,7 +35,7 @@ for ($i=10; $i!=0; $i--)
 
 	//Get the post number
 	$nepisode=explode("=",$tabcoup[$taille-$i]);
-	echo "<br><a href=p1/".$nepisode[0].".html>Post n°". $nepisode[0];
+	echo "<br><a href=posts/".$nepisode[0].".html>Post n°". $nepisode[0];
 	//Get the post title
 	$nepisode=explode("{",$tabcoup[$taille-$i]);
 
